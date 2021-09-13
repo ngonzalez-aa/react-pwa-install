@@ -7,7 +7,7 @@ function DialogActionWithInstructions(props) {
   return (
     <Box width="100%" display="flex" flexDirection="column">
       <Box>
-        <Typography variant="subtitle1">To install this app:</Typography>
+        <Typography variant="subtitle1">Para instalar esta aplicación:</Typography>
         <ul>
           <li>
             <span style={{ display: "flex", alignItems: "center" }}>{props.action1}</span>
@@ -28,9 +28,9 @@ export default function InstallDialogAction(props) {
       <DialogActions>
         {props.platform === platforms.NATIVE && (
           <>
-            <Button onClick={props.onClose}>Cancel</Button>
+            <Button onClick={props.onClose}>Cancelar</Button>
             <Button onClick={props.onSubmit} color="primary" variant="contained" disableElevation>
-              Install
+              Instalar
             </Button>
           </>
         )}
@@ -38,11 +38,11 @@ export default function InstallDialogAction(props) {
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the share button:
+                Toca el botón de compartir:
                 <IOSShareIcon />
               </>
             }
-            action2="then find and tap 'Add to Homescreen'"
+            action2="luego busque y toque en 'Agregar a la pantalla de inicio'"
             onSubmit={props.onSubmit}
           />
         )}
@@ -50,11 +50,11 @@ export default function InstallDialogAction(props) {
           <DialogActionWithInstructions
             action1={
               <>
-                Tap this icon on the address bar:
+                Toque este icono en la barra de direcciones:
                 <FireFoxA2HSIcon />
               </>
             }
-            action2="then tap '+Add to Homescreen'"
+            action2="luego toque '+ Agregar a la pantalla de inicio'"
             onSubmit={props.onSubmit}
           />
         )}
@@ -62,11 +62,11 @@ export default function InstallDialogAction(props) {
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the menu button:
+                Toque el botón de menú:
                 <MenuIcon />
               </>
             }
-            action2="then tap 'Install'"
+            action2="luego toque 'Instalar'"
             onSubmit={props.onSubmit}
           />
         )}
@@ -74,15 +74,15 @@ export default function InstallDialogAction(props) {
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the menu button:
+                Toque el botón de menú:
                 <MenuIcon />
               </>
             }
             action2={
               <>
-                then tap &nbsp;'
+                Luego toque &nbsp;'
                 <OperaA2HSIcon />
-                Home screen'
+                Pantalla de inicio'
               </>
             }
             onSubmit={props.onSubmit}
@@ -90,7 +90,7 @@ export default function InstallDialogAction(props) {
         )}
         {props.platform === platforms.OTHER && (
           <Box width="100%" display="flex" flexDirection="column">
-            <Box>Unfortunately the install feature is not supported by your browser.</Box>
+            <Box>Lamentablemente, la función de instalación no es compatible con su navegador.</Box>
             <Box width="100%" textAlign="right">
               <Button onClick={props.onClose}>Ok</Button>
             </Box>
